@@ -78,7 +78,7 @@ export default function PostIt({ id, position, text = '', className = POST_IT_DE
     setPostItModes({ ...postItModes, isEditing: true })
   }
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>): void => {
+  const handleMouseDown = (e: any): void => {
     const target = e.target as HTMLDivElement
     if (!target.classList.contains(POST_IT_CLASS_NAME)) return
     const currentId = target.id
@@ -106,7 +106,7 @@ export default function PostIt({ id, position, text = '', className = POST_IT_DE
     setPostItModes({ ...postItModes, isDragging: true })
   }
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>): void => {
+  const handleMouseMove = (e: any): void => {
     if (disableDragPostIt) return
     if (!postItModes.isDragging) return
     const target = e.target as HTMLDivElement
@@ -134,7 +134,7 @@ export default function PostIt({ id, position, text = '', className = POST_IT_DE
     setPostItList(newPostItList)
   }
 
-  const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>): void => {
+  const handleMouseUp = (e: any): void => {
     if (disableDragPostIt) return
     setStartOffset({
       ...startOffset,
@@ -160,10 +160,10 @@ export default function PostIt({ id, position, text = '', className = POST_IT_DE
       if ((currentLength + 1) % 10 === 0 && (currentLength + 1) !== 0 && (currentLength + 1) < LENGTH_LETTER_MODIFIER) setSizes({ ...sizes, width: sizes.width - LATER_WIDTH_INPUT })
       else if ((currentLength + 1) % LENGTH_LETTER_MODIFIER === 0) setSizes({ ...sizes, height: sizes.height - LATER_HEIGHT_INPUT })
     }
-    setCurrentText(e.target.value)
+    setCurrentText((e.target as HTMLTextAreaElement).value)
   }
 
-  const handleKeyTextArea = (e: React.KeyboardEvent<HTMLTextAreaElement>): void => {
+  const handleKeyTextArea = (e: any): void => {
     const target = e.target as HTMLTextAreaElement
     const newText = target.value
     const currentId = target.id
@@ -194,20 +194,20 @@ export default function PostIt({ id, position, text = '', className = POST_IT_DE
     }
   }
 
-  const handlePaste = (e: React.ClipboardEvent<HTMLTextAreaElement>): void => {
+  const handlePaste = (e: any): void => {
     e.preventDefault()
     const pasteText = e.clipboardData.getData('text')
     const newText = currentText + pasteText
     setCurrentText(newText.length > LIMIT_TEXT_LENGTH ? newText.slice(0, LIMIT_TEXT_LENGTH) : newText)
   }
 
-  const handleFocus = (e: React.FocusEvent<HTMLTextAreaElement>): void => {
+  const handleFocus = (e: any): void => {
     const target = e.target as HTMLTextAreaElement
     const textLength = target.value.length
     target.setSelectionRange(textLength, textLength)
   }
 
-  const handleAction = (e: React.MouseEvent<HTMLButtonElement>): void => {
+  const handleAction = (e: any): void => {
     if (action === ACTIONS_NAMES.copy) {
       const target = e.target as HTMLButtonElement
       const text = target.closest(`.${POST_IT_CLASS_NAME}`)?.querySelector(`.${POST_IT_TEXT_CLASS}`)?.textContent as string
@@ -237,7 +237,7 @@ export default function PostIt({ id, position, text = '', className = POST_IT_DE
       {
         text &&
           !postItModes.isEditing
-          ? <div onDoubleClick={handleDoubleClick} onMouseDown={!postItModes.isBlocked ? handleMouseDown : () => { }} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} id={id}
+          ? <div onDblClick={handleDoubleClick} onMouseDown={!postItModes.isBlocked ? handleMouseDown : () => { }} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} id={id}
             className={`${POST_IT_CLASS_NAME} ${className}${postItModes.isDragging ? ' is-dragging ' : ''}${styleBentCorner ? ` ${BENT_CORNER_CLASS}` : ''}${stylePinned ? ` ${PINNED_CLASS}` : ''}${ACTIONS_NAMES[action as keyof typeof ACTIONS_NAMES] && defaultAction !== ACTIONS_NAMES.none ? ` ${POST_IT_ACTIONS_CLASS}` : ''}${!actionFixed && actionClass == null ? ` ${POST_IT_ACTIONS_HOVER_CLASS}` : ''}`}
             style={{ position: 'absolute', top: postItList.length > 0 ? position.y : currentPosition.y, left: postItList.length > 0 ? position.x : currentPosition.x, backgroundColor: fill, color, opacity: opacity !== 1 ? opacity : '', borderRadius: rounded > 0 ? rounded : '', display: hidden ? 'none' : '', fontSize, fontWeight, fontFamily }}>
             <span className={POST_IT_TEXT_CLASS}>{currentText}</span>
