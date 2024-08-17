@@ -1,0 +1,45 @@
+{
+  "HERO": {
+    "TITLE": "The sticky notes library",
+    "DESCRIPTION": "Post It is a React library that allows you to create and manage sticky notes easily and in a customizable way. It simplifies the creation of interactive user interfaces with notes that can be moved, edited, customized, and deleted effortlessly.",
+    "FIRST_BUTTON": "Get started",
+    "SECOND_BUTTON": "View package"
+  },
+  "USAGE": {
+    "TITLE": "How to use it?",
+    "DESCRIPTION": "To start using Post-It, follow these steps:",
+    "SINGLE_TITLE": "Single Post It example",
+    "SINGLE_DESCRIPTION": "Ideal for when you want to use a defined number of Post Its.",
+    "LIST_TITLE": "Post It list example",
+    "LIST_DESCRIPTION": "Ideal for when you want to use an \"unlimited\" number of Post Its and manage them in a list (React state)."
+  },
+  "ACTIONS": {
+    "TITLE": "Interactive actions",
+    "DESCRIPTION": "Post-It allows you to perform the following optional actions with your sticky notes."
+  },
+  "DISABLE": {
+    "TITLE": "Disable actions",
+    "DESCRIPTION": "You can disable the actions of moving, editing, and deleting sticky notes."
+  },
+  "STYLES": {
+    "TITLE": "Other styles...",
+    "DESCRIPTION": "There are other types of Post Its with predefined styles."
+  },
+  "TABLE": {
+    "TITLE": "Property guide",
+    "DESCRIPTION": "Here are all the properties that each Post It accepts."
+  },
+  "CODE": {
+    "COPIED_TEXT": "Copied!",
+    "DOUBLE_CLICK": "Double-click to create a Post It"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "All rights reserved",
+    "MADE_WITH": "Made with",
+    "BY": "by"
+  },
+  "LANGUAGE": {
+    "LABEL": "Es",
+    "URL": "/"
+  }
+}

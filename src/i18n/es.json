@@ -1,0 +1,45 @@
+{
+  "HERO": {
+    "TITLE": "La librería de notas adhesivas",
+    "DESCRIPTION": "Post It es una biblioteca de React que permite crear y gestionar notas adhesivas de forma sencilla y personalizable. Simplifica la creación de interfaces de usuario interactivas con notas que se pueden mover, editar, personalizar y eliminar fácilmente.",
+    "FIRST_BUTTON": "Empezar",
+    "SECOND_BUTTON": "Ver paquete"
+  },
+  "USAGE": {
+    "TITLE": "¿Cómo usarlo?",
+    "DESCRIPTION": "Para empezar a usar Post-It, sigue los siguientes pasos:",
+    "SINGLE_TITLE": "Ejemplo de Post It singular",
+    "SINGLE_DESCRIPTION": "Ideal para cuando quieras usar una cierta cantidad de Post Its definida.",
+    "LIST_TITLE": "Ejemplo de lista de Post It",
+    "LIST_DESCRIPTION": "Ideal para cuando quieras usar una cantidad \"ilimitada\" de Post Its y manejarlos en una lista (estado de React)."
+  },
+  "ACTIONS": {
+    "TITLE": "Acciones interactivas",
+    "DESCRIPTION": "Post-It te permite realizar las siguientes acciones opcionales con tus notas adhesivas."
+  },
+  "DISABLE": {
+    "TITLE": "Desactivar acciones",
+    "DESCRIPTION": "Puedes desactivar las acciones de mover, editar y eliminar notas adhesivas."
+  },
+  "STYLES": {
+    "TITLE": "Otros estilos...",
+    "DESCRIPTION": "Existen otros tipos de Post Its con estilos predefinidos."
+  },
+  "TABLE": {
+    "TITLE": "Guía de propiedades",
+    "DESCRIPTION": "Aquí tienes todas las propiedades que acepta cada Post It."
+  },
+  "CODE": {
+    "COPIED_TEXT": "¡Copiado!",
+    "DOUBLE_CLICK": "Haz doble click para crear un Post It"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Todos los derechos reservados",
+    "MADE_WITH": "Hecho con",
+    "BY": "por"
+  },
+  "LANGUAGE": {
+    "LABEL": "En",
+    "URL": "/en"
+  }
+}

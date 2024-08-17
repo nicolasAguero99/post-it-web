@@ -1,0 +1,25 @@
+---
+// i18n
+import { getI18N } from "@/i18n";
+const i18n = getI18N(Astro.url.pathname).LANGUAGE;
+---
+
+<header class='max-w-[1000px] mx-auto px-4'>
+  <nav class='flex justify-between items-center gap-8 py-4'>
+    <div class='flex gap-1 items-center'>
+      <img class='size-6 md:size-8' src='/icons/post-it-logo.svg' alt='post it logo' />
+      <strong class='text-base md:text-lg font-semibold'>Post it</strong>
+    </div>
+    <ul class='flex gap-4 justify-center [&>li>a>img]:size-7 hover:[&>li>a]:opacity-50 [&>li>a]:transition-opacity [&>li>a]:duration-300' >
+      <li>
+        <a href='https://github.com/nicolasAguero99/post-it-library' target='_blank'><img src='/icons/github-icon.svg' alt='github' /></a>
+      </li>
+      <li>
+        <a href='https://www.npmjs.com/package/post-it-react' target='_blank'><img src='/icons/npm-icon.svg' alt='npm' /></a>
+      </li>
+      <li>
+        <a class='text-lg underline underline-offset-4 font-semibold' href={i18n.URL}>{i18n.LABEL}</a>
+      </li>
+    </ul>
+  </nav>
+</header>

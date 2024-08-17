@@ -1,0 +1,20 @@
+---
+// i18n
+import { getI18N } from "@/i18n";
+const i18n = getI18N(Astro.url.pathname).FOOTER;
+---
+
+<footer class='bg-primary text-white flex flex-col gap-4 text-center py-8 mt-6'>
+  <ul
+    class='flex gap-4 justify-center [&>li>a>img]:invert [&>li>a>img]:size-7 hover:[&>li>a>img]:opacity-50 [&>li>a>img]:transition-opacity [&>li>a>img]:duration-300'
+  >
+    <li><a href='https://github.com/nicolasAguero99/post-it-library' target='_blank'><img src='/icons/github-icon.svg' alt='github' /></a></li>
+    <li><a href='https://www.npmjs.com/package/post-it-react' target='_blank'><img src='/icons/npm-icon.svg' alt='npm' /></a></li>
+    <li><a href='https://www.linkedin.com/in/nicolas-aguero99' target='_blank'><img src='/icons/linkedin-icon.svg' alt='linkedin' /></a></li>
+  </ul>
+  <span>{i18n.MADE_WITH} 🤍 {i18n.BY} <strong>Nicolás Agüero</strong></span>
+  <small>
+    &copy; 2024 - {new Date().getFullYear()}
+    {i18n.COPYRIGHT}
+  </small>
+</footer>

@@ -1,0 +1,60 @@
+---
+// Constants
+import {
+  DEFAULTS_TABLE,
+  DESCRIPTION_TABLE,
+  EXAMPLES_TABLES,
+  HEADERS_TABLE,
+  PROPS_TABLE,
+  TYPES_TABLE,
+} from "@/constants/constants";
+
+// i18n
+import { getI18N } from "@/i18n";
+const i18n = getI18N(Astro.url.pathname).TABLE;
+---
+
+<section class='mt-20'>
+  <div class='flex flex-col gap-2 my-8'>
+    <h2 class='text-3xl lg:text-4xl font-semibold'>{i18n.TITLE}</h2>
+    <p class='max-sm:text-sm text-gray-500'>{i18n.DESCRIPTION}</p>
+  </div>
+  <div class='mt-4 overflow-x-auto'>
+    <table class='min-w-full table-auto border-collapse border border-gray-200'>
+      <thead>
+        <tr class='bg-primary'>
+          {
+            HEADERS_TABLE.map((header) => (
+              <th class='px-4 py-2 border-b border-gray-300 text-left text-sm font-medium text-white'>
+                {header}
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          PROPS_TABLE.map((prop, index) => (
+            <tr class='hover:bg-primary/10 text-sm text-gray-500'>
+              <td class='px-4 py-2 border-b-[1px] border-gray-400/30 first:text-primary first:font-semibold'>
+                {prop}
+              </td>
+              <td class='px-4 py-2 border-b-[1px] border-gray-400/30 first:text-primary first:font-semibold'>
+                {TYPES_TABLE[index]}
+              </td>
+              <td class='px-4 py-2 border-b-[1px] border-gray-400/30 first:text-primary first:font-semibold'>
+                {DESCRIPTION_TABLE[index]}
+              </td>
+              <td class='px-4 py-2 border-b-[1px] border-gray-400/30 first:text-primary first:font-semibold'>
+                {DEFAULTS_TABLE[index]}
+              </td>
+              <td class='px-4 py-2 border-b-[1px] border-gray-400/30 first:text-primary first:font-semibold'>
+                {EXAMPLES_TABLES[index]}
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</section>
