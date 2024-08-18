@@ -10,11 +10,11 @@ const i18n = getI18N(Astro.url.pathname).HERO;
     <h1 class='text-3xl sm:text-4xl min-[1000px]:text-5xl font-medium leading-normal mb-6'>{i18n.TITLE}</h1>
     <p class='text-base sm:text-lg min-[1000px]:text-xl text-gray-500 leading-[1.75] mb-10'>{i18n.DESCRIPTION}</p>
     <div class='flex max-[420px]:flex-col text-center gap-4'>
-      <button
+      <a href='https://www.npmjs.com/package/post-it-react' target='_blank'
         class='text-base sm:text-lg font-medium bg-primary text-white py-2.5 px-10 rounded-lg hover:bg-white hover:text-primary border border-primary transition-colors duration-300 ease-out'
-        >{i18n.FIRST_BUTTON}</button
+        >{i18n.FIRST_BUTTON}</a
       >
-      <a href='https://www.npmjs.com/package/post-it-react' target='_blank' class='text-base sm:text-lg font-medium bg-white text-primary py-2.5 px-10 rounded-lg shadow-md transition-shadow duration-300 ease-out hover:shadow-inner'
+      <a href='https://github.com/nicolasAguero99/post-it-library' target='_blank' class='text-base sm:text-lg font-medium bg-white text-primary py-2.5 px-10 rounded-lg shadow-md transition-shadow duration-300 ease-out hover:shadow-inner'
         >{i18n.SECOND_BUTTON}</a
       >
     </div>

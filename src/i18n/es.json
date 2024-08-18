@@ -2,8 +2,8 @@
   "HERO": {
     "TITLE": "La librería de notas adhesivas",
     "DESCRIPTION": "Post It es una biblioteca de React que permite crear y gestionar notas adhesivas de forma sencilla y personalizable. Simplifica la creación de interfaces de usuario interactivas con notas que se pueden mover, editar, personalizar y eliminar fácilmente.",
-    "FIRST_BUTTON": "Empezar",
-    "SECOND_BUTTON": "Ver paquete"
+    "FIRST_BUTTON": "Ver paquete",
+    "SECOND_BUTTON": "Ver repo"
   },
   "USAGE": {
     "TITLE": "¿Cómo usarlo?",

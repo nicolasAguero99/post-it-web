@@ -2,8 +2,8 @@
   "HERO": {
     "TITLE": "The sticky notes library",
     "DESCRIPTION": "Post It is a React library that allows you to create and manage sticky notes easily and in a customizable way. It simplifies the creation of interactive user interfaces with notes that can be moved, edited, customized, and deleted effortlessly.",
-    "FIRST_BUTTON": "Get started",
-    "SECOND_BUTTON": "View package"
+    "FIRST_BUTTON": "View package",
+    "SECOND_BUTTON": "View repo"
   },
   "USAGE": {
     "TITLE": "How to use it?",
