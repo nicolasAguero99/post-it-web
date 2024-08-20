@@ -8,4 +8,7 @@ To install Post It library:
 
 See the npm package link:
 
-[npm](https://www.npmjs.com/package/post-it-react)
+[See npm](https://www.npmjs.com/package/post-it-react)
+
+See the GitHub repo link:
+[See GitHub](https://github.com/nicolasAguero99/post-it-library)
